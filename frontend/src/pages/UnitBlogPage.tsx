@@ -19,7 +19,7 @@ const UnitBlogPage = () => {
   //   }
 
   if (!blog) {
-    return <p>" "</p>;
+    return <p>""</p>;
   }
 
   return (
