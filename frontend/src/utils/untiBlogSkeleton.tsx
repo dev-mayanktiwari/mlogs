@@ -5,10 +5,10 @@ const unitBlogSkeleton = () => {
   return (
     <div className="py-8 px-12 mt-16 min-h-screen">
       <div className="mb-4">
-        <Skeleton height={40} width={300} baseColor="#cccccc"/>
+        <Skeleton height={40} width={300} count={5} baseColor="#cccccc" highlightColor="#d9d9d9"/>
       </div>
       <div className="mb-4">
-        <Skeleton height={20} count={5} baseColor="#cccccc"/>
+        <Skeleton height={20} count={5} baseColor="#cccccc" highlightColor="#d9d9d9"/>
       </div>
     </div>
   );
