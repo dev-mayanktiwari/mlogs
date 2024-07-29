@@ -4,6 +4,7 @@ import useFetchBlogs from "../hooks/useFetchBlogs";
 import { useNavigate } from "react-router-dom";
 import blogSkeleton from "../utils/blogSkeleton";
 import formatDate from "../utils/dateExtractor";
+import BlogFooter from "../components/BlogFooter";
 
 const BlogPage = () => {
   const { loading, error, blogs } = useFetchBlogs();
@@ -22,11 +23,13 @@ const BlogPage = () => {
           <p className="text-red-500 text-center">No blogs to fetch.</p>
         )}
         {blogs.map((blog) => (
-          <div key={blog.id} onClick={() => handleClick(blog.id)}>
+          <div key={blog.id} onClick={() => handleClick(blog.id)} className="cursor-pointer">
             <Blog title={blog.title} date={formatDate(blog.createdAt)} />
           </div>
         ))}
       </div>
+
+      <BlogFooter />
     </>
   );
 };

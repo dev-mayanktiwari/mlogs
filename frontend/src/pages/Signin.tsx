@@ -4,6 +4,7 @@ import InputBox from "../components/InputBox";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import useSignIn from "../hooks/useSignIn";
+import BlogFooter from "../components/BlogFooter";
 
 export default function Signin() {
   const { error, loading, signin } = useSignIn();
@@ -53,6 +54,8 @@ export default function Signin() {
           </div>
         </div>
       </div>
+
+      <BlogFooter />
     </>
   );
 }

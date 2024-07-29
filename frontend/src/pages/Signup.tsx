@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import useSignup from "../hooks/useSignup";
 import { useState } from "react";
+import BlogFooter from "../components/BlogFooter";
 
 export default function Signup() {
   const { error, loading, signup } = useSignup();
@@ -68,6 +69,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      <BlogFooter />
     </>
   );
 }

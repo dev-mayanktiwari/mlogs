@@ -5,6 +5,7 @@ import useUnitBlog from "../hooks/useUnitBlog";
 import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
 import unitBlogSkeleton from "../utils/untiBlogSkeleton";
+import BlogFooter from "../components/BlogFooter";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -31,6 +32,8 @@ const UnitBlogPage = () => {
         <p>{formatDate(blog.createdAt)}</p>
         <p className="pt-5">{blog.content}</p>
       </div>
+
+      <BlogFooter />
     </>
   );
 };
