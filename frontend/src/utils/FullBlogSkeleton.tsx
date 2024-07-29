@@ -1,7 +1,7 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const UnitBlogSkeleton = () => {
+const FullBlogSkeleton = () => {
   return (
     <SkeletonTheme baseColor="#cccccc" highlightColor="#d9d9d9">
       <article className="mb-12 font-myFont flex flex-col md:flex-row items-center justify-between mx-5">
@@ -26,4 +26,4 @@ const UnitBlogSkeleton = () => {
   );
 };
 
-export default UnitBlogSkeleton;
+export default FullBlogSkeleton;

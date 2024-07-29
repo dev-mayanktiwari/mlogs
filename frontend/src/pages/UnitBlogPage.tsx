@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
 import BlogFooter from "../components/BlogFooter";
 import "react-loading-skeleton/dist/skeleton.css";
-import UnitBlogSkeleton from "../utils/UnitBlogSkeleton";
+import FullBlogSkeleton from "../utils/FullBlogSkeleton";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -15,7 +15,7 @@ const UnitBlogPage = () => {
       <Navbar />
       <div className="bg-backgroundDark font-myFont py-8 px-12 mt-16 min-h-screen text-primary-foreground">
         {loading ? (
-          UnitBlogSkeleton()
+          FullBlogSkeleton()
         ) : error ? (
           <p className="text-red-500 text-center">{error}</p>
         ) : blog ? (
