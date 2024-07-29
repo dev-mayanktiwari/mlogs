@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
 // import unitBlogSkeleton from "../utils/untiBlogSkeleton";
 import BlogFooter from "../components/BlogFooter";
-import blogSkeleton from "../utils/blogSkeleton";
+// import blogSkeleton from "../utils/blogSkeleton";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -20,13 +20,13 @@ const UnitBlogPage = () => {
   //   }
 
   if (!blog) {
-    return <p></p>;
+    return;
   }
 
   return (
     <>
       <Navbar />
-      {loading && blogSkeleton()}
+      {loading && <p className="text-center">Loading...</p>} 
       {error && <p className="text-red-500 text-center">{error}</p>}
       {!blog && <p className="text-red-500 text-center">No blog found.</p>}
       <div className="bg-backgroundDark font-myFont py-8 px-12 mt-16 min-h-screen text-primary-foreground">
