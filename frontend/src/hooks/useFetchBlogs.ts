@@ -31,7 +31,7 @@ const useFetchBlogs = () => {
       // const auth = str.concat(token);
       // console.log(auth);
       const authToken = "Bearer " + token;
-      console.log(authToken);
+      // console.log(authToken);
       //   const currentUser = localStorage.getItem("currentUser");
       //   console.log(JSON.parse(currentUser).token);
       const response = await axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
