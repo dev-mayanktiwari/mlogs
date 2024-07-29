@@ -3,8 +3,8 @@ import useUnitBlog from "../hooks/useUnitBlog";
 import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
 import BlogFooter from "../components/BlogFooter";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import UnitBlogSkeleton from "../utils/unitBlogSkeleton";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -15,17 +15,7 @@ const UnitBlogPage = () => {
       <Navbar />
       <div className="bg-backgroundDark font-myFont py-8 px-12 mt-16 min-h-screen text-primary-foreground">
         {loading ? (
-          <SkeletonTheme>
-            <h1 className="text-3xl font-bold pb-2">
-              <Skeleton height={40} />
-            </h1>
-            <p>
-              <Skeleton width={150} />
-            </p>
-            <div className="pt-5">
-              <Skeleton count={5} />
-            </div>
-          </SkeletonTheme>
+          UnitBlogSkeleton()
         ) : error ? (
           <p className="text-red-500 text-center">{error}</p>
         ) : blog ? (
