@@ -1,5 +1,3 @@
-// src/pages/BlogDetail.tsx
-import React from "react";
 import { useParams } from "react-router-dom";
 import useUnitBlog from "../hooks/useUnitBlog";
 import Navbar from "../components/Navbar";
