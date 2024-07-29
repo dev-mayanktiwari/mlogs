@@ -2,8 +2,9 @@ import { useParams } from "react-router-dom";
 import useUnitBlog from "../hooks/useUnitBlog";
 import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
-import unitBlogSkeleton from "../utils/untiBlogSkeleton";
+// import unitBlogSkeleton from "../utils/untiBlogSkeleton";
 import BlogFooter from "../components/BlogFooter";
+import blogSkeleton from "../utils/blogSkeleton";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -19,13 +20,13 @@ const UnitBlogPage = () => {
   //   }
 
   if (!blog) {
-    return <p>""</p>;
+    return <p></p>;
   }
 
   return (
     <>
       <Navbar />
-      {loading && unitBlogSkeleton()}
+      {loading && blogSkeleton()}
       {error && <p className="text-red-500 text-center">{error}</p>}
       {!blog && <p className="text-red-500 text-center">No blog found.</p>}
       <div className="bg-backgroundDark font-myFont py-8 px-12 mt-16 min-h-screen text-primary-foreground">
