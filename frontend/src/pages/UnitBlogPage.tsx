@@ -18,9 +18,9 @@ const UnitBlogPage = () => {
   //     return <p className="text-red-500">{error}</p>;
   //   }
 
-  //   if (!blog) {
-  //     return <p>No blog found.</p>;
-  //   }
+  if (!blog) {
+    return <p>No blog found.</p>;
+  }
 
   return (
     <>
