@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import formatDate from "../utils/dateExtractor";
 import BlogFooter from "../components/BlogFooter";
 import "react-loading-skeleton/dist/skeleton.css";
-import UnitBlogSkeleton from "../utils/unitBlogSkeleton";
+import UnitBlogSkeleton from "../utils/UnitBlogSkeleton";
 
 const UnitBlogPage = () => {
   const { id } = useParams<{ id: string }>();
